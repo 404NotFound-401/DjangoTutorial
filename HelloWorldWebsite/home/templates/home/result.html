@@ -1,22 +1,47 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>SearchTest</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
+
+<style>
+    body {
+        text-align: center;
+    }
+    img {
+        margin: 1em 1em;
+        width: 30%;
+    }
+    form {
+        margin: 1em 1em;
+    }
+</style>
+
 <body>
+    <img src={{Poster}} alt={{Title}}>
+    <div class="list-group">
+
+        <p class="list-group-item list-group-item-action list-group-item-primary"><strong>Movie Name:</strong> {{Title}}
+        </p>
+        <p class="list-group-item list-group-item-action list-group-item-primary"><strong>Release Year:</strong>
+            {{Year}}</p>
+        <p class="list-group-item list-group-item-action list-group-item-primary"><strong>Runtime:</strong> {{Runtime}}
+        </p>
+        <p class="list-group-item list-group-item-action list-group-item-primary"><strong>Genre:</strong> {{Genre}}</p>
+        <p class="list-group-item list-group-item-action list-group-item-primary"><strong>Director:</strong>
+            {{Director}}</p>
+        <p class="list-group-item list-group-item-action list-group-item-primary"><strong>Actors:</strong> {{Actors}}
+        </p>
+    </div>
+
     <form method="post" name="submit-form">
         {% csrf_token %}
-        <input type="submit" value="Search Again">
+        <input type="submit" value="Search Again" class="btn btn-info">
     </form>
-    <p>Movie Name: {{Title}}</p>
-    <p>Realse Year: {{Year}}</p>
-    <p>Runtime: {{Runtime}}</p>
-    <p>Genre: {{Genre}}</p>
-    <p>Director: {{Director}}</p>
-    <p>Actors: {{Actors}}</p>
-    <p>Movie Name: <img src={{Poster}} alt={{Title}}></p>
 
-    <p>This is a test page. Not represent final result.</p>
 </body>
+
 </html>
