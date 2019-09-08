@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SearchTest</title>
+</head>
+<body>
+    <form method="post" name="submit-form">
+        {% csrf_token %}
+        <input type="submit" value="Search Again">
+    </form>
+    <p>Movie Name: {{Title}}</p>
+    <p>Realse Year: {{Year}}</p>
+    <p>Runtime: {{Runtime}}</p>
+    <p>Genre: {{Genre}}</p>
+    <p>Director: {{Director}}</p>
+    <p>Actors: {{Actors}}</p>
+    <p>Movie Name: <img src={{Poster}} alt={{Title}}></p>
+
+    <p>This is a test page. Not represent final result.</p>
+</body>
+</html>
