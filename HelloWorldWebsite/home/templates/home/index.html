@@ -1,59 +1,58 @@
 <head>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, intial-scale=1, shrink-to-fit=no">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, intial-scale=1, shrink-to-fit=no">
 
-<!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
 </head>
 
+<style>
+  body {
+    text-align: center;
+    background: url("https://images.unsplash.com/photo-1485846234645-a62644f84728?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1940&q=80");
+    background-size: cover;
+  }
+
+  h1 {
+    font-family: 'Abril Fatface', cursive;
+    margin: 2em 2em;
+    font-size: 4em;
+    font-weight: bold;
+  }
+
+  input {
+    width: 30% !important;
+    margin: auto;
+  }
+
+  form {
+
+  }
+
+  footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+    font-size: 0.8em;
+  }
+</style>
+
 <body>
+  <h1>Movie info search engine</h1>
+  <form action="">
+    <div class="form-group">
+      <label for="movie_name">Movie name</label>
+      <input type="text" class="form-control form-control-lg" id="movie_name" placeholder="Give movie name here">
+    </div>
 
-  <style>
-  .colour {
-    color: #FF0000;
-    background-color: #000000;
-  }
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
 
-  .wrapper .button-css {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #FF0000;
-  }
-
-  .helloworld-text {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .wrapper {
-    display: flex;
-    height: 100%;
-    flex-direction: column;
-    justify-content: center;
-  }
-  </style>
-
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<form method="POST" name="submit-form">
-  {% csrf_token %}
-  <div class="wrapper">
-    <h1 class="helloworld-text">Hello World!</h1>
-    <h1 class="helloworld-text">Count: {{our_counter.count}}</h1>
-    <button id="button" class="btn button-css waves-effect" onclick="changeColor();">Submit</button>
-  </div>
-</form>
-
-<script>
-  function changeColor(){
-    console.log("here")
-    var button = document.getElementById('button');
-    document.body.classList.toggle('colour')
-  }
-</script>
-
+  <footer>Image source:
+    https://images.unsplash.com/photo-1485846234645-a62644f84728?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1940&q=80
+  </footer>
 
 </body>
