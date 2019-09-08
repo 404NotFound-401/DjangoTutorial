@@ -20,9 +20,8 @@ class Search(generic.DetailView):
     def post(self, request, *args, **kwargs):
         if 'movieName' in request.POST:
             context = searchapi.getName(request.POST['movieName'])
-            ctx = {'movieId':context}
         else:
             print("Wrong act")
             return redirect('mainpage') 
-        return render(request, self.template_name, ctx)
+        return render(request, self.template_name, context)
 
