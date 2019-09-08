@@ -20,5 +20,4 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     path('test', include('home.urls')),
     path('', include('searchTest.urls')),
-    path('search', include('search.urls')),
 ]
