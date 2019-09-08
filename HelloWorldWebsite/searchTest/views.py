@@ -6,6 +6,7 @@ from django.http import HttpResponse
 from django.views import generic
 from .models import Movie
 from . import searchapi
+from django.urls import reverse
 
 # Create your views here.
 
@@ -19,9 +20,11 @@ class Search(generic.DetailView):
 
     def post(self, request, *args, **kwargs):
         if 'movieName' in request.POST:
+            print("Get movie name")
             context = searchapi.getName(request.POST['movieName'])
         else:
             print("Wrong act")
             return redirect('mainpage') 
-        return render(request, self.template_name, context)
+        return render(request, "home/result.html", context)
+
 

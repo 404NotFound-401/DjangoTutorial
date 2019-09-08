@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,9 +7,7 @@
 <body>
     <form method="post" name="submit-form">
         {% csrf_token %}
-        <p>Movie name:<p>
-        <input type="text" name="movieName">
-        <input type="submit" value="Search">
+        <input type="submit" value="Search Again">
     </form>
     <p>Movie Name: {{Title}}</p>
     <p>Realse Year: {{Year}}</p>
@@ -17,10 +15,8 @@
     <p>Genre: {{Genre}}</p>
     <p>Director: {{Director}}</p>
     <p>Actors: {{Actors}}</p>
-    <br />
-    <img style="display:flex;align-content:center;" src={{Poster}} alt='Movie Name'+{{Title}}>
+    <p>Movie Name: <img src={{Poster}} alt={{Title}}></p>
 
     <p>This is a test page. Not represent final result.</p>
 </body>
 </html>
-
