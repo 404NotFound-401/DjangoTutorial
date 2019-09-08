@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\HelloWorldWebsite",
+    "\\HelloWorldWebsite\\HelloWorldWebsite",
+    "\\HelloWorldWebsite\\home\\templates",
+    "\\HelloWorldWebsite\\home\\templates\\home",
+    "\\HelloWorldWebsite\\search",
+    "\\HelloWorldWebsite\\searchTest",
+    "\\HelloWorldWebsite\\searchTest\\templates",
+    "\\HelloWorldWebsite\\search\\templates"
+  ],
+  "SelectedNode": "\\HelloWorldWebsite\\searchTest\\urls.py",
+  "PreviewInSolutionExplorer": false
+}

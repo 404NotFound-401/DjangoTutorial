@@ -5,12 +5,13 @@
     <title>SearchTest</title>
 </head>
 <body>
-    <form action="/search/" method="post">
-        Movie name:
-        <input type="text" name="movieName" value="The Lion King">
+    <form method="post" name="submit-form">
+        {% csrf_token %}
+        <p>Movie name:<p>
+        <input type="text" name="movieName">
         <input type="submit" value="Search">
     </form>
-
+    <p>Movie ID: {{movieId}}</p>
     <p>This is a test page. Not represent final result.</p>
 </body>
 </html>
