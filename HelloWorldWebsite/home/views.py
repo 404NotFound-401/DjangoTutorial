@@ -20,4 +20,4 @@ class Home(generic.DetailView):
         counter_object = Counter.objects.get(pk=1)
         counter_object.count += 1
         counter_object.save()
-        return redirect('homepage')
+        return redirect('mainpage')
